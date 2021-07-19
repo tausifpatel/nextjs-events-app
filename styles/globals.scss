@@ -1,0 +1,24 @@
+$lbh-asset-path: "~lbh-frontend/lbh/assets";
+
+// @import "node_modules/lbh-frontend/lbh/all";
+@import "node_modules/govuk-frontend/govuk/all";
+
+// @import "node_modules/lbh-frontend/lbh/base";
+// @import "node_modules/lbh-frontend/lbh/core/all";
+// @import "node_modules/lbh-frontend/lbh/objects/all";
+
+// Import your components here
+// @import "node_modules/lbh-frontend/lbh/components/lbh-accordion/accordion";
+
+// @import "node_modules/lbh-frontend/lbh/utilities/all";
+// @import "node_modules/lbh-frontend/lbh/overrides/all";
+
+
+.title {
+    font-family: gov-uk-bold-1;
+}
+
+@font-face {
+    font-family: gov-uk-bold-1;
+    src: url("../node_modules/govuk-frontend/govuk/assets/fonts/bold-affa96571d-v2.woff");
+}
