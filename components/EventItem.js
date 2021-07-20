@@ -1,9 +1,9 @@
-const EventItem = ({eventName, eventDay, eventDate, eventTime, eventVenue, eventDescription}) => {
+const EventItem = ({eventName, eventDDT, eventVenue, eventDescription}) => {
     return (
         <div>
             <main className="govuk-main-wrapper " id="main-content" role="main">
                 <h2> {eventName} </h2>
-                <p> {eventDay}, {eventDate}, {eventTime} </p>
+                <p> {eventDDT} </p>
                 <p> {eventVenue} </p>
                 <p> {eventDescription} </p>
             </main>

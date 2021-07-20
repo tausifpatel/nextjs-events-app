@@ -6,9 +6,7 @@ const EventsList = (props) => {
             {props.events.map(event => (
                 <EventItem 
                     eventName = {event.eventName}
-                    eventDay = {event.eventDay}
-                    eventDate = {event.eventDate}
-                    eventTime = {event.eventTime}
+                    eventDDT = {event.eventDDT}
                     eventVenue = {event.eventVenue}
                     eventDescription = {event.eventDescription}
                 />
