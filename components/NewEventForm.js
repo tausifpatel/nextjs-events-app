@@ -34,8 +34,7 @@ const NewEventForm = (props) => {
             eventDescription
         }
 
-        // props.onAddEvent(eventData);
-        console.log(eventData);
+        props.onAddEvent(eventData);
     }
 
     return (
