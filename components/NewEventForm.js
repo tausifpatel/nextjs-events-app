@@ -1,6 +1,6 @@
 import { useRef } from "react";
 
-const NewEventForm = () => {
+const NewEventForm = (props) => {
     const eventNameRef = useRef();
     const eventVenueRef = useRef();
     const eventDayRef = useRef();
@@ -27,8 +27,8 @@ const NewEventForm = () => {
             eventDescription
         }
 
-        console.log(eventData);
-
+        props.onAddEvent(eventData);
+        // console.log(eventData);
     }
 
     return (
