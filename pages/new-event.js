@@ -1,20 +1,21 @@
+import router, { useRouter } from "next/router"
+import axios from "axios";
+
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import NewEventForm from "../components/NewEventForm";
 
 const NewEventPage = () => {
-
     const handleAddNewEvent = async (eventData) => {
-        const response = await fetch('/api/add-new-event', {
-            method: "POST",
-            body: JSON.stringify(eventData),
-            headers: {
-                'Content-Type': 'application/json'
-            }
+
+        await axios.post('/api/add-new-event', eventData)
+            .then((response) => {
+                console.log(response);
+            }, (error) => {
+                console.log(error);
         });
 
-        const data = await response.json();
-        console.log(data);
+        router.push("/");
     }
 
     return (

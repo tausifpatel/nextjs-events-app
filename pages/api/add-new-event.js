@@ -20,6 +20,9 @@ async function handles(req, res){
     }
 }
 
+export default handles;
+
+
 
 ////////// From documentation 
 // async function handles(req, res){
@@ -46,4 +49,4 @@ async function handles(req, res){
 //     }
 // }
 
-export default handles;
+

@@ -8,6 +8,7 @@
     "start": "next start"
   },
   "dependencies": {
+    "axios": "^0.21.1",
     "body-parser": "^1.19.0",
     "govuk-frontend": "^3.13.0",
     "lbh-frontend": "3.2.1",
