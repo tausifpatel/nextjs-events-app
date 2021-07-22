@@ -6,6 +6,7 @@ const NewEventForm = (props) => {
     const eventDayRef = useRef();
     const eventMonthRef = useRef();
     const eventYearRef = useRef();
+    const eventTimeRef = useRef();
     const eventDescriptionRef = useRef();
 
     const submitHandler = event => {
@@ -16,9 +17,15 @@ const NewEventForm = (props) => {
         const eventDay = eventDayRef.current.value;
         const eventMonth = eventMonthRef.current.value;
         const eventYear = eventYearRef.current.value;
+        const eventTime = eventTimeRef.current.value;
         const eventDescription = eventDescriptionRef.current.value;
 
-        const eventDDT = new Date(`${eventMonth}/${eventDay}/${eventYear}`);
+        // const eventDDT = new Date(`${eventMonth}/${eventDay}/${eventYear}`);
+
+        const date = new Date(eventYear, (parseInt(eventMonth)-1), eventDay);
+        const month = date.toLocaleString('en-GB', { month: 'long' });
+        const day = date.toLocaleString('en-GB', { weekday: 'long' });
+        const eventDDT = `${day} ${month} ${eventDay}, ${eventTime}`
 
         const eventData = {
             eventName, 
@@ -27,8 +34,8 @@ const NewEventForm = (props) => {
             eventDescription
         }
 
-        props.onAddEvent(eventData);
-        // console.log(eventData);
+        // props.onAddEvent(eventData);
+        console.log(eventData);
     }
 
     return (
@@ -77,6 +84,13 @@ const NewEventForm = (props) => {
                             <input className="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" pattern="[0-9]*" inputmode="numeric" ref={eventYearRef}/></div>
                         </div>   
                     </div>
+                </div>
+
+                <div className="govuk-form-group">
+                    <label className="govuk-label" htmlFor="address-line-1">
+                        What time is the Event?
+                    </label>
+                    <input className="govuk-input" type="text" pattern="[0-9,:]*" inputmode="numeric" ref={eventTimeRef} placeholder="18:00 (24 hours format)" />
                 </div>
                 
                 <div className="govuk-form-group">
