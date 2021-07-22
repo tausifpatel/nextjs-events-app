@@ -23,7 +23,6 @@ async function handles(req, res){
 export default handles;
 
 
-
 ////////// From documentation 
 // async function handles(req, res){
 //     if(req.method === "POST"){
@@ -48,5 +47,4 @@ export default handles;
 //         res.status(201).json({message: "Event inserted!"});
 //     }
 // }
-
 
