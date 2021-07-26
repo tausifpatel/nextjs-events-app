@@ -1,13 +1,16 @@
-import Link from "next/link";
+import router from "next/router";
 
 const Nav = () => {
+
+    const handleAddNewEvent = () => {
+        router.push("/new-event");
+    }
+
     return (
         <div className="govuk-width-container">
-            <nav className="app-navigation govuk-clearfix govuk-!-margin-bottom-7">
-                    <li className="app-navigation__list-item">
-                        <Link className="govuk-link govuk-link--no-visited-state govuk-link--no-underline" href='/new-event'>Add New Event</Link>
-                    </li>
-            </nav>
+            <button className="govuk-button" onClick={handleAddNewEvent} >
+                Add new event 
+            </button>
         </div>
     )
 }
