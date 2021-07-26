@@ -2,6 +2,7 @@ import Header from "../components/Header";
 import Title  from "../components/Title";
 import Footer from "../components/Footer";
 import EventsList from "../components/EventsList";
+import Nav from "../components/Nav";
 
 export default function Home() {
 
@@ -27,7 +28,12 @@ export default function Home() {
       <Header />
       <Title />
       <EventsList events = {events} />
+      <Nav />
       <Footer />
     </div>
   );
 }
+
+// export function getStaticProps() {
+//   const client = MongoClient.connect("mongodb+srv://tausifpatel:Zzz1dW1NRWpnTfJr@cluster0.akm73.mongodb.net/events?retryWrites=true&w=majority");
+// }

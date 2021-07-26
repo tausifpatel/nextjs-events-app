@@ -20,8 +20,7 @@ const NewEventForm = (props) => {
         const eventTime = eventTimeRef.current.value;
         const eventDescription = eventDescriptionRef.current.value;
 
-        // const eventDDT = new Date(`${eventMonth}/${eventDay}/${eventYear}`);
-
+        // Create Event date and time
         const date = new Date(eventYear, (parseInt(eventMonth)-1), eventDay);
         const month = date.toLocaleString('en-GB', { month: 'long' });
         const day = date.toLocaleString('en-GB', { weekday: 'long' });
@@ -89,7 +88,10 @@ const NewEventForm = (props) => {
                     <label className="govuk-label" htmlFor="address-line-1">
                         What time is the Event?
                     </label>
-                    <input className="govuk-input" type="text" pattern="[0-9,:]*" inputmode="numeric" ref={eventTimeRef} placeholder="18:00 (24 hours format)" />
+                    <div class="govuk-hint">
+                        24 hours format (18:00)
+                    </div>
+                    <input className="govuk-input govuk-input--width-5" type="text" pattern="[0-9,:]*" inputmode="numeric" ref={eventTimeRef} placeholder="18:00" />
                 </div>
                 
                 <div className="govuk-form-group">
