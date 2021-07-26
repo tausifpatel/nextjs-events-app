@@ -1,6 +1,6 @@
 import router from "next/router";
 
-const Nav = () => {
+const NewEvent = () => {
 
     const handleAddNewEvent = () => {
         router.push("/new-event");
@@ -15,5 +15,5 @@ const Nav = () => {
     )
 }
 
-export default Nav;
+export default NewEvent;
 

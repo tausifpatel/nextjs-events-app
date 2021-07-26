@@ -4,7 +4,7 @@ import Header from "../components/Header";
 import Title  from "../components/Title";
 import Footer from "../components/Footer";
 import EventsList from "../components/EventsList";
-import Nav from "../components/Nav";
+import NewEvent from "../components/NewEvent";
 
 export default function Home(props) {
 
@@ -13,7 +13,7 @@ export default function Home(props) {
       <Header />
       <Title />
       <EventsList events = {props.events} />
-      <Nav />
+      <NewEvent />
       <Footer />
     </div>
   );
