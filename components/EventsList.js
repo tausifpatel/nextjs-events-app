@@ -5,6 +5,7 @@ const EventsList = (props) => {
         <div className="govuk-width-container">
             {props.events.map(event => (
                 <EventItem 
+                    id = {event.id}
                     eventName = {event.eventName}
                     eventDDT = {event.eventDDT}
                     eventVenue = {event.eventVenue}

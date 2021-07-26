@@ -65,21 +65,21 @@ const NewEventForm = (props) => {
                             <label className="govuk-label govuk-date-input__label" htmlFor="passport-issued-day">
                                 Day
                             </label>
-                            <input className="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" pattern="[0-9]*" inputmode="numeric" ref={eventDayRef} /></div>
+                            <input className="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" pattern="[0-9]*" inputMode="numeric" ref={eventDayRef} /></div>
                         </div>
                         <div className="govuk-date-input__item">
                             <div className="govuk-form-group">
                             <label className="govuk-label govuk-date-input__label" htmlFor="passport-issued-month">
                                 Month
                             </label>
-                            <input className="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" pattern="[0-9]*" inputmode="numeric" ref={eventMonthRef}/></div>
+                            <input className="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" pattern="[0-9]*" inputMode="numeric" ref={eventMonthRef}/></div>
                         </div>
                         <div className="govuk-date-input__item">
                             <div className="govuk-form-group">
                             <label className="govuk-label govuk-date-input__label" htmlFor="passport-issued-year">
                                 Year
                             </label>
-                            <input className="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" pattern="[0-9]*" inputmode="numeric" ref={eventYearRef}/></div>
+                            <input className="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" pattern="[0-9]*" inputMode="numeric" ref={eventYearRef}/></div>
                         </div>   
                     </div>
                 </div>
@@ -88,10 +88,10 @@ const NewEventForm = (props) => {
                     <label className="govuk-label" htmlFor="address-line-1">
                         What time is the Event?
                     </label>
-                    <div class="govuk-hint">
+                    <div className="govuk-hint">
                         24 hours format (18:00)
                     </div>
-                    <input className="govuk-input govuk-input--width-5" type="text" pattern="[0-9,:]*" inputmode="numeric" ref={eventTimeRef} placeholder="18:00" />
+                    <input className="govuk-input govuk-input--width-5" type="text" pattern="[0-9,:]*" inputMode="numeric" ref={eventTimeRef} placeholder="18:00" />
                 </div>
                 
                 <div className="govuk-form-group">
@@ -101,7 +101,7 @@ const NewEventForm = (props) => {
                     <textarea className="govuk-textarea" name="more-detail" rows="5" aria-describedby="more-detail-hint" ref={eventDescriptionRef} ></textarea>
                 </div>
 
-                <button class="govuk-button" data-module="govuk-button">
+                <button className="govuk-button" data-module="govuk-button">
                     Submit
                 </button>
 
